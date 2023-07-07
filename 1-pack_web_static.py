@@ -21,8 +21,8 @@ def do_pack():
         size = os.path.getsize(output)
         print("web_static packed: {} -> {}Bytes".format(output, size))
 
-    except OSError:
+    except OSError as e:
         output = None
-        print("An error occurred")
+        print("An error occurred: ", e)
 
     return output
